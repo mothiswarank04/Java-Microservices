@@ -1,13 +1,6 @@
-server:
-  port: 8082
 
 spring:
   application:
     name: department-service
-
-
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8721/eureka/
+  config:
+    import: "optional:configserver:http://localhost:8088"
