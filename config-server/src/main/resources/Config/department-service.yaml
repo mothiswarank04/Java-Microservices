@@ -6,9 +6,15 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8721/eureka/
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/test
+    url: jdbc:mysql://localhost:3306/departmen_mc
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
