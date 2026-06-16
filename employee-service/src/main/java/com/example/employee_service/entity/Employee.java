@@ -13,6 +13,7 @@ public class Employee {
     private String name;
 
     private Long departmentId;
+    private String departmentName;
 
     @Transient
     private Department department;
@@ -57,6 +58,14 @@ public class Employee {
 
     public void setDepartmentId(Long departmentId) {
         this.departmentId = departmentId;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 
     public Department getDepartment() {

@@ -27,9 +27,9 @@ public class DepartmentController {
         return departmentRepository.findAll();
     }
 
-    @GetMapping("/get/{id}")
-    public ResponseEntity<Department> getDepartmentById(@PathVariable Long id) {
-        return departmentRepository.findById(id)
+    @GetMapping("/get/{departmentId}")
+    public ResponseEntity<Department> getDepartmentById(@PathVariable Long departmentId) {
+        return departmentRepository.findById(departmentId)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
