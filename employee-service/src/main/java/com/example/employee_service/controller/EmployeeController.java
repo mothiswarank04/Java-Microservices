@@ -4,6 +4,7 @@ import com.example.employee_service.client.DepartmentClient;
 import com.example.employee_service.entity.Department;
 import com.example.employee_service.entity.Employee;
 import com.example.employee_service.repository.EmployeeRepository;
+import com.example.employee_service.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,12 +21,28 @@ public class EmployeeController {
     @Autowired
     private DepartmentClient departmentClient;
 
+
+//    @Autowired //Field Injection not recommended
+//    private PaymentService paymentService;
+
+//    private final PaymentService paymentService;
+
+    private PaymentService paymentService;
+
+    @Autowired
+    public void setPaymentService(PaymentService paymentService){
+        this.paymentService = paymentService;
+    }
+
+    
+
     public EmployeeController(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
     @GetMapping("/getall")
     public List<Employee> getAllEmployee() {
+
         return employeeRepository.findAll();
     }
 
