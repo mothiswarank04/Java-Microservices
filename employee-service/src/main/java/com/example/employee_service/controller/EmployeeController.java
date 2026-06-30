@@ -18,7 +18,7 @@ import java.util.Optional;
 public class EmployeeController {
     private final EmployeeRepository employeeRepository;
 
-    @Autowired
+    @Autowired //field DI
     private DepartmentClient departmentClient;
 
 
