@@ -49,8 +49,6 @@ public class EmployeeController {
     @GetMapping("/get/{id}")
     public ResponseEntity<Employee> getDepartmentById(@PathVariable Long id) {
 
-        Logger.
-
         Optional<Employee> employeeOptional = employeeRepository.findById(id);
 
         if (employeeOptional.isEmpty()) {
