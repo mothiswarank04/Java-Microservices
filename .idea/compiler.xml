@@ -12,6 +12,15 @@
         <module name="service-registry" />
         <module name="employee-service" />
       </profile>
+      <profile name="Annotation profile for dualDB" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="dualDB" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
@@ -19,6 +28,7 @@
       <module name="api-gateway" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="department-service" options="-parameters" />
+      <module name="dualDB" options="-parameters" />
       <module name="employee-service" options="-parameters" />
       <module name="service-registry" options="-parameters" />
     </option>
